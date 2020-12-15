@@ -1,5 +1,6 @@
 # read the data
-all_data <- read.table("household_power_consumption/household_power_consumption.txt", sep = ";", header = TRUE,
+unzip("household_power_consumption.zip")
+all_data <- read.table("household_power_consumption.txt", sep = ";", header = TRUE,
                        na.strings = "?", stringsAsFactors = FALSE)
 # index of the needed date
 needed_rows <- all_data$Date == "1/2/2007" | all_data$Date == "2/2/2007"
